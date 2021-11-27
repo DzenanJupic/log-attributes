@@ -1,0 +1,9 @@
+error: No arguments supplied
+       help: log requires a log level and a fmt string
+       example: #[log(info, "{fn} returned {return}")]
+ --> tests/fail/missing_arguments.rs:1:1
+  |
+1 | #[log_attributes::log()]
+  | ^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: this error originates in the attribute macro `log_attributes::log` (in Nightly builds, run with -Z macro-backtrace for more info)

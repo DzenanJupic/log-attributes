@@ -1,0 +1,5 @@
+error: Unexpected argument
+ --> tests/fail/to_many_arguments.rs:1:50
+  |
+1 | #[log_attributes::log(info, "{fn} was executed", asdf)]
+  |                                                  ^^^^

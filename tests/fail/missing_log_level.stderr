@@ -1,0 +1,7 @@
+error: Expected log level
+       note: The log level should be provided as an identifier without quotes
+       example: #[log(info, "{fn} returned {return}")]
+ --> tests/fail/missing_log_level.rs:1:23
+  |
+1 | #[log_attributes::log("{fn} was executed")]
+  |                       ^^^^^^^^^^^^^^^^^^^

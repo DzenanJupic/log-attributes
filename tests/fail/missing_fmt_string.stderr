@@ -1,0 +1,9 @@
+error: No format string supplied
+       help: log requires a fmt string that describes the log output
+       example: #[log(info, "{fn} returned {return}")]
+ --> tests/fail/missing_fmt_string.rs:1:1
+  |
+1 | #[log_attributes::log(info)]
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: this error originates in the attribute macro `log_attributes::log` (in Nightly builds, run with -Z macro-backtrace for more info)

@@ -1,0 +1,7 @@
+error[E0425]: cannot find value `a` in this scope
+ --> tests/fail/unknown_input.rs:1:1
+  |
+1 | #[log_attributes::log(info, "{fn} was executed with {a}")]
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+  |
+  = note: this error originates in the attribute macro `log_attributes::log` (in Nightly builds, run with -Z macro-backtrace for more info)
