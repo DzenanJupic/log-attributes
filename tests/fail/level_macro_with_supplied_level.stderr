@@ -1,0 +1,6 @@
+error: Expected a format string literal
+       example: #[log(info, "{fn} returned {return}")]
+ --> tests/fail/level_macro_with_supplied_level.rs:2:24
+  |
+2 | #[log_attributes::info(trace, "{fn} was called")]
+  |                        ^^^^^
