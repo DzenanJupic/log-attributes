@@ -1,0 +1,44 @@
+name: Check and Build code
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - '**.rs'
+      - 'Cargo.*'
+  pull_request:
+    branches:
+      - master
+    paths:
+      - '**.rs'
+      - 'Cargo.*'
+  workflow_dispatch:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  clippy:
+    name: Check and Build on ${{ matrix.toolchain }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        toolchain:
+          - stable
+          - nightly
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install minimal ${{ matrix.toolchain }} toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: ${{ matrix.toolchain }}
+          default: true
+      - name: Install clippy
+        run: rustup component add clippy
+      - name: Check
+        run: cargo clippy -- -D warnings
+      - name: Build
+        run: cargo build
