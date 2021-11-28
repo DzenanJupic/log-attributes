@@ -2,6 +2,17 @@
 name = "log-attributes"
 version = "0.1.0"
 edition = "2021"
+authors = ["Dzenan Jupic <56133904+DzenanJupic@users.noreply.github.com>"]
+description = "A set of function log attributes, that make logging function in- and outputs a charm."
+keywords = ["log", "macro", "attribute"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/DzenanJupic/log-attributes"
+documentation = "https://docs.rs/log-attributes"
+include = ["src/**/*", "Cargo.toml"]
+
+[package.metadata.doc.rs]
+all-features = true
 
 [lib]
 proc-macro = true
